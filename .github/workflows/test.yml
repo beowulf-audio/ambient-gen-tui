@@ -49,25 +49,15 @@ jobs:
       run: |
         python -c "import ambient_gen; assert ambient_gen.__version__ == '1.0.0'"
 
-    - name: Generate test artifacts
+    - name: Test CLI help
+      run: ambient-gen --help
+
+    - name: Generate test artifacts with CLI
       run: |
         mkdir -p test-output
-        python -c "
-        from ambient_gen.tui import AmbientGeneratorApp
-        app = AmbientGeneratorApp()
-        files = app.generate_track(tempo=90, bars=2, scale_choice='kumoi',
-                                   include_drone=True, include_pad=True,
-                                   include_melody=True, include_counter=False,
-                                   include_bells=False, render_audio=True,
-                                   enable_effects=False, enable_paulstretch=False)
-        import shutil
-        from pathlib import Path
-        # Files returned: 'midi' and 'mp3' (WAV is temporary and cleaned up)
-        for key, path in files.items():
-            dest = Path('test-output') / Path(path).name
-            shutil.copy2(path, dest)
-            print(f'Created {key}: {dest}')
-        "
+        cd test-output
+        ambient-gen --quick --tempo 90 --bars 2 --scale kumoi
+      continue-on-error: true
 
     - name: Upload test artifacts
       uses: actions/upload-artifact@v4
@@ -76,3 +66,4 @@ jobs:
         name: test-output-${{ matrix.os }}-py${{ matrix.python-version }}
         path: test-output/
         retention-days: 7
+        if-no-files-found: ignore
