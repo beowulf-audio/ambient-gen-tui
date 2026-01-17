@@ -52,9 +52,6 @@ class SoundfontManager:
             'SGM-V2.01': 'SGM V2.01',
             'TimGM6mb': 'TimGM6mb',
             'FluidR3_GM': 'FluidR3 GM',
-            'MS_Basic': 'MS Basic',
-            'Timbres_Of_Heaven': 'Timbres of Heaven',
-            'Timbres Of Heaven GM_GS_XG_SFX V 3.4 Final': 'Timbres of Heaven',
         }
 
         display_name = name_mapping.get(name, name)
@@ -65,8 +62,6 @@ class SoundfontManager:
             'SGM V2.01': 'Rich, warm ambient tones',
             'TimGM6mb': 'Compact General MIDI',
             'FluidR3 GM': 'FluidSynth GM soundfont',
-            'MS Basic': 'MuseScore basic soundfont',
-            'Timbres of Heaven': 'Huge GM/GS/XG soundfont',
         }
 
         return {

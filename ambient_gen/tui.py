@@ -116,52 +116,6 @@ SOUNDFONT_PROFILES = {
             'strings': 0.23,
             'music_box': 0.38
         }
-    },
-    'MS Basic': {
-        'instruments': {
-            'pad': 89,          # Warm Pad (standard GM)
-            'flute': 76,        # Pan Flute
-            'vibraphone': 11,   # Vibraphone
-            'strings': 48,      # String Ensemble 1
-            'music_box': 10     # Music Box
-        },
-        'volumes_with_effects': {
-            'pad': 4.5,         # MS Basic slightly quieter
-            'flute': 4.5,
-            'vibraphone': 1.0,
-            'strings': 0.13,
-            'music_box': 0.22
-        },
-        'volumes_no_effects': {
-            'pad': 3.0,
-            'flute': 3.0,
-            'vibraphone': 0.7,
-            'strings': 0.22,
-            'music_box': 0.36
-        }
-    },
-    'Timbres of Heaven': {
-        'instruments': {
-            'pad': 89,          # Warm Strings (rich, ambient)
-            'flute': 75,        # Pan Flute
-            'vibraphone': 11,   # Vibraphone
-            'strings': 49,      # Slow Strings (more ambient)
-            'music_box': 10     # Music Box
-        },
-        'volumes_with_effects': {
-            'pad': 4.2,         # Timbres of Heaven has rich samples
-            'flute': 4.2,
-            'vibraphone': 0.95,
-            'strings': 0.13,
-            'music_box': 0.21
-        },
-        'volumes_no_effects': {
-            'pad': 2.7,
-            'flute': 2.7,
-            'vibraphone': 0.65,
-            'strings': 0.20,
-            'music_box': 0.32
-        }
     }
 }
 

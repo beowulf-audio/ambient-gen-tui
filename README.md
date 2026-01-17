@@ -116,15 +116,15 @@ All of this happens automatically with zero configuration!
 
 ## Included Soundfonts
 
-The package includes 5 high-quality General MIDI soundfonts (compressed to 120MB):
+The package includes 3 high-quality, freely-licensed General MIDI soundfonts (compressed to 41MB):
 
-- **FluidR3 GM** (23MB) - Clean, balanced GM soundfont
-- **GeneralUser GS** (7MB) - Excellent pads and flutes, great for ambient
-- **MS Basic** (49MB) - MuseScore's default soundfont
-- **SGM V2.01** (27MB) - Rich, warm ambient tones
-- **Timbres of Heaven** (51MB) - Huge GM/GS/XG soundfont with extensive samples
+- **FluidR3 GM** (23MB) - Clean, balanced GM soundfont (MIT License)
+- **GeneralUser GS** (7MB) - Excellent pads and flutes, perfect for ambient (Custom Permissive License)
+- **SGM V2.01** (27MB) - Rich, warm ambient tones (GPLv3)
 
 Soundfonts are automatically extracted from a compressed archive on first import.
+
+See [LICENSES.md](LICENSES.md) for complete licensing information and attribution.
 
 ## Development
 
