@@ -49,22 +49,7 @@ jobs:
       run: |
         python -c "import ambient_gen; assert ambient_gen.__version__ == '1.0.0'"
 
-    - name: Generate test MIDI (core functionality)
-      run: |
-        python -c "
-        from ambient_gen.tui import generate_midi
-        from pathlib import Path
-        import tempfile
-        with tempfile.TemporaryDirectory() as tmpdir:
-            midi_path = Path(tmpdir) / 'test.mid'
-            generate_midi(midi_path, tempo=120, bars=4, scale_choice='hirajoshi',
-                         include_drone=True, include_pad=True, include_melody=True,
-                         include_counter=False, include_bells=False)
-            assert midi_path.exists()
-            print(f'Generated MIDI: {midi_path.stat().st_size} bytes')
-        "
-
-    - name: Generate test artifacts with audio
+    - name: Generate test artifacts
       run: |
         mkdir -p test-output
         python -c "
@@ -77,6 +62,7 @@ jobs:
                                    enable_effects=False, enable_paulstretch=False)
         import shutil
         from pathlib import Path
+        # Files returned: 'midi' and 'mp3' (WAV is temporary and cleaned up)
         for key, path in files.items():
             dest = Path('test-output') / Path(path).name
             shutil.copy2(path, dest)
