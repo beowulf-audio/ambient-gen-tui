@@ -5,12 +5,19 @@ Create lush, generative ambient music with spacey textures in your terminal.
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/main.png" width="45%" alt="Main interface">
-  <img src="docs/screenshots/settings.png" width="45%" alt="Settings view">
+  <img src="docs/screenshots/main.png" width="80%" alt="Main interface">
 </p>
+
 <p align="center">
-  <img src="docs/screenshots/themes.png" width="45%" alt="Theme selection">
-  <img src="docs/screenshots/completed.png" width="45%" alt="Generation complete">
+  <img src="docs/screenshots/settings.png" width="80%" alt="Settings view">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/themes.png" width="80%" alt="Theme selection">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/completed.png" width="80%" alt="Generation complete">
 </p>
 
 ## Example Output
