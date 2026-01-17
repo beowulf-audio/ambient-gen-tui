@@ -22,15 +22,10 @@ Create lush, generative ambient music with spacey textures in your terminal.
 
 ## Example Output
 
-Listen to what the generator creates (rendered with FluidR3 GM soundfont):
+Listen to what the generator creates:
 
-<audio controls>
-  <source src="docs/examples/ambient_20260117_175950.mp3" type="audio/mpeg">
-  Your browser does not support the audio element. <a href="docs/examples/ambient_20260117_175950.mp3">Download MP3</a>
-</audio>
-
-- **[Download MIDI](docs/examples/ambient_20260117_175950.mid)** - Raw MIDI composition
-- **[Download MP3](docs/examples/ambient_20260117_175950.mp3)** - Rendered audio file
+- **[🎵 Listen to MP3](docs/examples/ambient_20260117_175950.mp3)** - Example ambient track (rendered with GeneralUser GS soundfont)
+- **[📄 Download MIDI](docs/examples/ambient_20260117_175950.mid)** - Raw MIDI composition
 
 ## Features
 
