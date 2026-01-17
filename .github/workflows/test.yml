@@ -30,7 +30,7 @@ jobs:
         pip install -e .
 
     - name: Test import
-      run: python -c "import ambient_gen; print(f'Version: {ambient_gen.__version__}')"
+      run: python -c "import ambient_gen; print('Version:', ambient_gen.__version__)"
 
     - name: Test soundfont extraction
       run: python -c "import ambient_gen; import os; assert os.path.exists(ambient_gen._soundfonts_dir)"
