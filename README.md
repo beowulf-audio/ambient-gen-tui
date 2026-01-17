@@ -22,10 +22,13 @@ Create lush, generative ambient music with spacey textures in your terminal.
 
 ## Example Output
 
-Listen to what the generator creates:
+Listen to what the generator creates (rendered with GeneralUser GS soundfont):
 
-- **[🎵 Listen to MP3](docs/examples/ambient_20260117_175950.mp3)** - Example ambient track (rendered with GeneralUser GS soundfont)
-- **[📄 Download MIDI](docs/examples/ambient_20260117_175950.mid)** - Raw MIDI composition
+[ambient_20260117_175950.mp4](https://github.com/beowulf-audio/ambient-gen-tui/raw/main/docs/examples/ambient_20260117_175950.mp4)
+
+**Download files:**
+- **[🎵 MP3 Audio](docs/examples/ambient_20260117_175950.mp3)** - Rendered audio file
+- **[📄 MIDI File](docs/examples/ambient_20260117_175950.mid)** - Raw MIDI composition
 
 ## Features
 
