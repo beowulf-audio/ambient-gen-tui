@@ -146,7 +146,7 @@ ambient_gen/
 ├── midi_generator.py        # MIDI composition engine
 ├── audio_renderer.py        # Audio synthesis and effects
 ├── soundfont_manager.py     # Soundfont discovery and management
-└── soundfonts.tar.xz        # Compressed soundfonts (120MB)
+└── soundfonts.tar.xz        # Compressed soundfonts (41MB)
     → Extracts to soundfonts/ on first import
 ```
 
@@ -155,7 +155,7 @@ ambient_gen/
 - **Audio Quality**: 44.1kHz, 16-bit stereo WAV
 - **MIDI Resolution**: 960 ticks per quarter note
 - **Effects**: Freeverb reverb, Paulstretch time-stretching (4x stretch)
-- **Package Size**: ~120MB (soundfonts compressed with xz)
+- **Package Size**: ~41MB (soundfonts compressed with xz)
 - **Python Version**: 3.8+
 
 ## Credits
