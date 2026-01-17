@@ -67,11 +67,7 @@ Launch the interactive TUI:
 ambient-gen
 ```
 
-Or generate a track with default settings:
-
-```bash
-ambient-gen --quick
-```
+The TUI is fully interactive - use keyboard controls to customize generation!
 
 ## Usage
 
@@ -115,19 +111,12 @@ ambient-gen
 
 Generate without the TUI:
 
-```bash
-# Quick generation with defaults
-ambient-gen --quick
-
-# Specify scale
-ambient-gen --quick --scale hirajoshi
-
-# Custom tempo and length
-ambient-gen --quick --tempo 60 --bars 16
-
-# With audio effects
-ambient-gen --quick --effects
-```
+The app provides an interactive TUI where you can:
+- Adjust tempo, bars, and scale selection
+- Toggle individual instrument layers
+- Enable/disable audio effects
+- Cycle through different soundfonts
+- Generate tracks with live preview
 
 ### Output Files
 
