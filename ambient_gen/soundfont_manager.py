@@ -35,8 +35,14 @@ class SoundfontManager:
             for sf_path in self.soundfonts_dir.glob(pattern):
                 fonts.append(self._create_font_entry(sf_path))
 
-        # Sort by name
-        fonts.sort(key=lambda x: x['name'])
+        # Sort with GeneralUser GS first, then alphabetically
+        def sort_key(font):
+            if font['name'] == 'GeneralUser GS':
+                return (0, font['name'])  # First
+            else:
+                return (1, font['name'])  # Then alphabetically
+
+        fonts.sort(key=sort_key)
         return fonts
 
     def _create_font_entry(self, path: Path) -> Dict:
