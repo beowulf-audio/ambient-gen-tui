@@ -66,16 +66,16 @@ SOUNDFONT_PROFILES = {
             'music_box': 10     # Music Box
         },
         'volumes_with_effects': {
-            'pad': 5.5,
-            'flute': 5.5,
-            'vibraphone': 1.2,
-            'strings': 0.15,
-            'music_box': 0.25
+            'pad': 5.5,         # Dominant foundation
+            'flute': 14.6,      # Counter melody, blended with pads
+            'vibraphone': 2.91, # Counter melody, matches music box
+            'strings': 0.10,    # Subtle background drone
+            'music_box': 0.25   # Twinkly background sparkle
         },
         'volumes_no_effects': {
             'pad': 3.5,
             'flute': 3.5,
-            'vibraphone': 0.8,
+            'vibraphone': 1.1,
             'strings': 0.25,
             'music_box': 0.4
         }
@@ -89,18 +89,18 @@ SOUNDFONT_PROFILES = {
             'music_box': 10     # Music Box
         },
         'volumes_with_effects': {
-            'pad': 4.0,         # SGM tends to be louder, adjusted down
-            'flute': 4.0,
-            'vibraphone': 0.9,
-            'strings': 0.12,
-            'music_box': 0.20
+            'pad': 1.67,
+            'flute': 0.53,
+            'vibraphone': 3.51,
+            'strings': 0.10,
+            'music_box': 20.0
         },
         'volumes_no_effects': {
-            'pad': 2.5,
-            'flute': 2.5,
-            'vibraphone': 0.6,
-            'strings': 0.18,
-            'music_box': 0.30
+            'pad': 4.15,
+            'flute': 1.04,
+            'vibraphone': 47.68,
+            'strings': 0.16,
+            'music_box': 47.59
         }
     },
     'FluidR3 GM': {
@@ -112,18 +112,18 @@ SOUNDFONT_PROFILES = {
             'music_box': 10     # Music Box
         },
         'volumes_with_effects': {
-            'pad': 5.0,         # FluidR3 similar to GeneralUser
-            'flute': 5.0,
-            'vibraphone': 1.1,
-            'strings': 0.14,
-            'music_box': 0.23
+            'pad': 0.48,
+            'flute': 1.20,
+            'vibraphone': 1.52,
+            'strings': 0.02,
+            'music_box': 0.19
         },
         'volumes_no_effects': {
-            'pad': 3.2,
-            'flute': 3.2,
-            'vibraphone': 0.75,
-            'strings': 0.23,
-            'music_box': 0.38
+            'pad': 6.84,
+            'flute': 0.06,
+            'vibraphone': 0.84,
+            'strings': 0.01,
+            'music_box': 0.44
         }
     }
 }

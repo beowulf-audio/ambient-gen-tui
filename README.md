@@ -32,9 +32,9 @@ Sample track generated with the Hirajoshi scale (rendered with GeneralUser GS so
 - 🎼 **Multiple scales** - Currently featuring Japanese pentatonic scales (Hirajoshi, In Sen, Kumoi, Yo)
 - 🎹 **Five layered instruments** (Pad, Flute, Vibraphone, Strings, Music Box)
 - 🎚️ **Adjustable tempo and length**
-- 🎨 **Multiple soundfonts** (5 high-quality GM soundfonts included)
+- 🎨 **Multiple soundfonts** (3 high-quality GM soundfonts included)
 - 🎛️ **Audio effects** (Reverb and Paulstretch time-stretching)
-- 📦 **Export to MIDI, WAV, and MP3**
+- 📦 **Export to MIDI and MP3**
 - 💻 **Beautiful terminal user interface** (TUI)
 - ⚡ **Simple setup** - one dependency (PortAudio), then `pip install`!
 
@@ -68,7 +68,7 @@ pip install ambient-gen
 pip install ambient-gen
 ```
 
-**Note:** If you skip the PortAudio installation, the app will still work for MIDI generation, but audio rendering (WAV/MP3 export) will be disabled.
+**Note:** If you skip the PortAudio installation, the app will still work for MIDI generation, but MP3 export will be disabled.
 
 ## Quick Start
 
@@ -91,7 +91,7 @@ ambient-gen
 #### Keyboard Controls
 
 **Generation & Files:**
-- `g` - Generate new track (creates MIDI, WAV, and MP3)
+- `g` - Generate new track (creates MIDI and MP3)
 - `o` - Open output folder
 - `q` - Quit
 
@@ -133,8 +133,7 @@ The app provides an interactive TUI where you can:
 
 Generated files are saved to `~/Desktop/ambient_gen_output/`:
 - `ambient_YYYYMMDD_HHMMSS.mid` - MIDI file
-- `ambient_YYYYMMDD_HHMMSS.wav` - High-quality WAV audio (44.1kHz, 16-bit)
-- `ambient_YYYYMMDD_HHMMSS.mp3` - Compressed MP3 audio (192kbps)
+- `ambient_YYYYMMDD_HHMMSS.mp3` - MP3 audio (192kbps)
 
 ## How It Works
 
@@ -190,7 +189,7 @@ ambient_gen/
 
 ## Technical Details
 
-- **Audio Quality**: 44.1kHz, 16-bit stereo WAV
+- **Audio Quality**: 44.1kHz, 16-bit stereo, 192kbps MP3
 - **MIDI Resolution**: 960 ticks per quarter note
 - **Effects**: Freeverb reverb, Paulstretch time-stretching (4x stretch)
 - **Package Size**: ~41MB (soundfonts compressed with xz)
