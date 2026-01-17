@@ -48,3 +48,45 @@ jobs:
     - name: Check package version
       run: |
         python -c "import ambient_gen; assert ambient_gen.__version__ == '1.0.0'"
+
+    - name: Generate test MIDI (core functionality)
+      run: |
+        python -c "
+        from ambient_gen.tui import generate_midi
+        from pathlib import Path
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmpdir:
+            midi_path = Path(tmpdir) / 'test.mid'
+            generate_midi(midi_path, tempo=120, bars=4, scale_choice='hirajoshi',
+                         include_drone=True, include_pad=True, include_melody=True,
+                         include_counter=False, include_bells=False)
+            assert midi_path.exists()
+            print(f'Generated MIDI: {midi_path.stat().st_size} bytes')
+        "
+
+    - name: Generate test artifacts with audio
+      run: |
+        mkdir -p test-output
+        python -c "
+        from ambient_gen.tui import AmbientGeneratorApp
+        app = AmbientGeneratorApp()
+        files = app.generate_track(tempo=90, bars=2, scale_choice='kumoi',
+                                   include_drone=True, include_pad=True,
+                                   include_melody=True, include_counter=False,
+                                   include_bells=False, render_audio=True,
+                                   enable_effects=False, enable_paulstretch=False)
+        import shutil
+        from pathlib import Path
+        for key, path in files.items():
+            dest = Path('test-output') / Path(path).name
+            shutil.copy2(path, dest)
+            print(f'Created {key}: {dest}')
+        "
+
+    - name: Upload test artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-output-${{ matrix.os }}-py${{ matrix.python-version }}
+        path: test-output/
+        retention-days: 7
