@@ -11,15 +11,39 @@ Create lush, generative ambient music with spacey textures in your terminal.
 - 🎛️ **Audio effects** (Reverb and Paulstretch time-stretching)
 - 📦 **Export to MIDI, WAV, and MP3**
 - 💻 **Beautiful terminal user interface** (TUI)
-- ⚡ **Zero system dependencies** - just `pip install` and go!
+- ⚡ **Simple setup** - one dependency (PortAudio), then `pip install`!
 
 ## Installation
 
+### macOS
+
 ```bash
+# Install PortAudio (required for audio synthesis)
+brew install portaudio
+
+# Install ambient-gen
 pip install ambient-gen
 ```
 
-That's it! All dependencies (including soundfonts and FFmpeg) are automatically installed. Works on macOS, Linux, and Windows with no additional setup required!
+### Linux (Ubuntu/Debian)
+
+```bash
+# Install PortAudio development files
+sudo apt-get update
+sudo apt-get install portaudio19-dev
+
+# Install ambient-gen
+pip install ambient-gen
+```
+
+### Windows
+
+```bash
+# No additional dependencies needed - just install directly
+pip install ambient-gen
+```
+
+All other dependencies (including soundfonts and FFmpeg) are automatically installed!
 
 ## Quick Start
 
