@@ -719,7 +719,7 @@ class LayerCheckbox(Static):
         self._is_disabled = False
 
     def render(self) -> str:
-        checkbox = "[X]" if self.checked else "[ ]"
+        checkbox = "\\[X]" if self.checked else "\\[ ]"
         if self._is_disabled:
             return f"[dim]{checkbox} {self.label}[/dim]"
         return f"{checkbox} {self.label}"
@@ -773,6 +773,11 @@ class AmbientGeneratorApp(App):
     }
 
     LayerCheckbox {
+        height: 1;
+        padding: 0 1;
+    }
+
+    SoundfontSelector {
         height: 1;
         padding: 0 1;
     }

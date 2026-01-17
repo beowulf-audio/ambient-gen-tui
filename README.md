@@ -2,6 +2,24 @@
 
 Create lush, generative ambient music with spacey textures in your terminal.
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/main.png" width="45%" alt="Main interface">
+  <img src="docs/screenshots/settings.png" width="45%" alt="Settings view">
+</p>
+<p align="center">
+  <img src="docs/screenshots/themes.png" width="45%" alt="Theme selection">
+  <img src="docs/screenshots/completed.png" width="45%" alt="Generation complete">
+</p>
+
+## Example Output
+
+Listen to what the generator creates:
+
+- **[MIDI File](docs/examples/ambient_20260117_175950.mid)** - Raw MIDI composition
+- **[MP3 Audio](docs/examples/ambient_20260117_175950.mp3)** - Rendered with FluidR3 GM soundfont
+
 ## Features
 
 - 🎼 **Multiple scales** - Currently featuring Japanese pentatonic scales (Hirajoshi, In Sen, Kumoi, Yo)
