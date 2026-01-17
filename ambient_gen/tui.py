@@ -17,9 +17,18 @@ from textual.containers import Container, Horizontal
 from textual.widgets import Header, Footer, Button, Label, Static
 from textual.binding import Binding
 from textual.worker import Worker, WorkerState
-import numpy as np
-import tinysoundfont
-from static_ffmpeg import run
+# Optional audio synthesis dependencies
+try:
+    import numpy as np
+    import tinysoundfont
+    from static_ffmpeg import run
+    AUDIO_AVAILABLE = True
+except ImportError:
+    AUDIO_AVAILABLE = False
+    np = None
+    tinysoundfont = None
+    run = None
+
 from .soundfont_manager import SoundfontManager
 
 # Default output directory - try Desktop, fallback to home
@@ -1011,6 +1020,17 @@ class AmbientGeneratorApp(App):
     def generate_track(self, tempo, bars, scale_choice, include_drone, include_pad,
                       include_melody, include_counter, include_bells, render_audio=True,
                       enable_effects=True, enable_paulstretch=False):
+        # Check if audio dependencies are available
+        if render_audio and not AUDIO_AVAILABLE:
+            raise ImportError(
+                "Audio synthesis dependencies not installed. "
+                "Install with: pip install ambient-gen[audio]\n\n"
+                "Or install PortAudio first:\n"
+                "  macOS: brew install portaudio\n"
+                "  Linux: sudo apt-get install portaudio19-dev\n"
+                "Then: pip install ambient-gen[audio]"
+            )
+
         # Update status from worker thread
         self.call_from_thread(self._update_status, "🎵 Creating MIDI...")
 

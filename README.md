@@ -15,35 +15,49 @@ Create lush, generative ambient music with spacey textures in your terminal.
 
 ## Installation
 
-### macOS
+### Option 1: MIDI Only (No System Dependencies)
+
+Generate MIDI files only, with no audio rendering:
 
 ```bash
-# Install PortAudio (required for audio synthesis)
-brew install portaudio
-
-# Install ambient-gen
 pip install ambient-gen
 ```
 
-### Linux (Ubuntu/Debian)
+This installs just the core dependencies and lets you create MIDI files that you can render with your own tools.
+
+### Option 2: Full Audio Synthesis (Recommended)
+
+Generate MIDI + WAV + MP3 files with built-in audio rendering:
+
+#### macOS
+
+```bash
+# Install PortAudio first
+brew install portaudio
+
+# Install ambient-gen with audio support
+pip install ambient-gen[audio]
+```
+
+#### Linux (Ubuntu/Debian)
 
 ```bash
 # Install PortAudio development files
 sudo apt-get update
 sudo apt-get install portaudio19-dev
 
-# Install ambient-gen
-pip install ambient-gen
+# Install ambient-gen with audio support
+pip install ambient-gen[audio]
 ```
 
-### Windows
+#### Windows
 
 ```bash
-# No additional dependencies needed - just install directly
-pip install ambient-gen
+# No additional dependencies needed on Windows
+pip install ambient-gen[audio]
 ```
 
-All other dependencies (including soundfonts and FFmpeg) are automatically installed!
+The `[audio]` extra includes soundfonts and FFmpeg for complete audio rendering!
 
 ## Quick Start
 
