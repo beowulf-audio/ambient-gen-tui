@@ -67,7 +67,7 @@ ambient-gen
 **Audio Options:**
 - `a` - Toggle audio effects (Reverb + Paulstretch)
 - `e` - Toggle effects only mode (just reverb/paulstretch, no dry signal)
-- `f` - Cycle soundfonts (FluidR3 GM, GeneralUser, MS Basic, SGM, Timbres of Heaven)
+- `f` - Cycle soundfonts (FluidR3 GM, GeneralUser GS, SGM V2.01)
 - `p` - Toggle Paulstretch time-stretching effect
 
 **Visual:**
@@ -161,11 +161,9 @@ ambient_gen/
 ## Credits
 
 - **Soundfonts**:
-  - [FluidR3 GM](https://github.com/musescore/MuseScore/tree/master/share/sound) - Frank Wen
-  - [GeneralUser GS](https://schristiancollins.com/generaluser.php) - S. Christian Collins
-  - [MS Basic](https://musescore.org/) - MuseScore
-  - [SGM V2.01](https://archive.org/details/SGM-V2.01) - Shan
-  - [Timbres of Heaven](http://www.midkar.com/soundfonts/) - Don Allen
+  - [FluidR3 GM](https://member.keymusician.com/Member/FluidR3_GM/) - Frank Wen (MIT License)
+  - [GeneralUser GS](https://schristiancollins.com/generaluser.php) - S. Christian Collins (Permissive License)
+  - [SGM V2.01](https://archive.org/details/SGM-V2.01) - David Shan (GPLv3)
 - **Audio Synthesis**: [tinysoundfont](https://github.com/nwhitehead/tinysoundfont-pybind)
 - **FFmpeg Integration**: [static-ffmpeg](https://github.com/zackees/static_ffmpeg)
 - **TUI Framework**: [Textual](https://textual.textualize.io/)
